@@ -1,18 +1,16 @@
 <!doctype html>
-<html>
+<html lang="en">
 	<head>
 		<title>Web App</title>
 		<link rel="manifest" href="manifest.json">
 		<link rel="stylesheet" href="css/index.css"></link>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 		<link rel="icon" href="img/icon32x32.png" type="image/png" />
 	</head>
 	<body>
 		<app-root></app-root>
 		<service-worker url="service-worker.js" scope="./"></service-worker>
-		<script src="js/lib/utilities.js"></script>
-		<script src="js/components/service-worker.js"></script>
-		<script src="js/components/app-root.js"></script>
+		<script type="module" src="js/components/service-worker.js"></script>
+		<script type="module" src="js/components/app-root.js"></script>
 	</body>
 </html>

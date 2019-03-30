@@ -9,13 +9,11 @@ class extends HTMLElement {
 		this.installServiceWorker();
 	}
 	async installServiceWorker(){
-		if("serviceWorker" in navigator){
-			try {
-				const serviceWorker = await navigator.serviceWorker.register(this.url, {scope: this.scope});
-				this.serviceWorkerInstalled(serviceWorker);
-			}catch(ex){
-				this.serviceWorkerInstallFailed(ex);
-			}
+		try {
+			const serviceWorker = await navigator.serviceWorker.register(this.url, {scope: this.scope});
+			this.serviceWorkerInstalled(serviceWorker);
+		}catch(ex){
+			this.serviceWorkerInstallFailed(ex);
 		}
 	}
 

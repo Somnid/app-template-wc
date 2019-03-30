@@ -1,16 +1,16 @@
 :root{
-	--primary-color: orange;
-	--primary-color-dark: darkorange;
-	--complimentary-color: blue;
-	--complimentary-color-dark: darkblue;
-	--warn-color: #cccc00;
-	--warn-background: #FDFFB5;
-	--negative-color: #cc0000;
-	--negative-background:  #ffebeb;
-	--info-color: #0000cc;
-	--info-background: #d9dbff;
-	--positive-color: #00cc00;
-	--positive-background: #e2ffd9;
+	--primary-medium: orange;
+	--primary-dark: darkorange;
+	--complimentary-medium: blue;
+	--complimentary-dark: darkblue;
+	--warn-medium: #cccc00;
+	--warn-light: #FDFFB5;
+	--negative-medium: #cc0000;
+	--negative-light:  #ffebeb;
+	--info-medium: #0000cc;
+	--info-light: #d9dbff;
+	--positive-medium: #00cc00;
+	--positive-light: #e2ffd9;
 }
 *,
 *::before,
@@ -61,7 +61,7 @@ dialog {
 }
 button,
 .link-button {
-	background: var(--primary-color);
+	background: var(--primary-medium);
 	border: none;
 	border-radius: 5px;
 	padding: 8px;
@@ -72,7 +72,7 @@ button,
 }
 button:hover,
 .link-button:hover {
-	background: var(--primary-color-dark);
+	background: var(--primary-dark);
 }
 button:focus,
 .link-button:focus {
@@ -86,7 +86,7 @@ button.toggle,
 	height: 30px;
 	border: 1px solid #ccc;
 	padding: 0px;
-	background: var(--complimentary-color);
+	background: var(--complimentary-medium);
 	transition: 0.25s;
 }
 button.toggle::after,
@@ -105,7 +105,7 @@ button.toggle::after,
 button.toggle.on,
 .link-button.toggle.on {
 	border: 1px solid #ccc;
-	background-color: red
+	background-color: var(--negative-medium)
 }
 button.toggle.on::after{
 	transform: translateX(30px);
@@ -113,10 +113,10 @@ button.toggle.on::after{
 
 button.toggled:hover,
 .link-button.toggled:hover {
-	background: var(--complimentary-color-dark);
+	background: var(--complimentary-dark);
 }
 .hidden {
-	display: none;
+	display: none !important;
 }
 .row{
 	display: flex;
@@ -136,30 +136,30 @@ button.toggled:hover,
 	align-items: stretch;
 }
 .error {
-	color: var(--negative-color);
-	background: var(--negative-background);
-	border: 1px solid var(--negative-color);
+	color: var(--negative-medium);
+	background: var(--negative-light);
+	border: 1px solid var(--negative-medium);
 	padding: 5px;
 	margin-bottom: 10px;
 }
 .success {
-	color: var(--positive-color);
-	background: var(--success-background);
-	border: 1px solid var(--success-color);
+	color: var(--positive-medium);
+	background: var(--positive-light);
+	border: 1px solid var(--positive-medium);
 	padding: 5px;
 	margin-bottom: 10px;
 }
 .warn {
-	color: var(--warn-color);
-	background: var(--warn-background);
-	border: 1px solid var(--warn-color);
+	color: var(--warn-medium);
+	background: var(--warn-light);
+	border: 1px solid var(--warn-medium);
 	padding: 5px;
 	margin-bottom: 10px;
 }
 .info {
-	color: var(--info-color);
-	background: var(--info-background);
-	border: 1px solid var(--info-color);
+	color: var(--info-medium);
+	background: var(--info-light);
+	border: 1px solid var(--info-medium);
 	padding: 5px;
 	margin-bottom: 10px;
 }
